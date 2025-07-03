@@ -33,7 +33,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     def render_execution_result(self):
         gc.load_settings('settings/settings.json')
-        is_completed = self.exec_code(f'python3 -u {main_window.path}')
+        is_completed = self.exec_code(f'python -u {main_window.path}')
         
         if is_completed:
             with open('buffer/full_object.pickle', 'rb') as f:

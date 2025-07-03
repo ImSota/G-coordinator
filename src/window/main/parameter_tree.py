@@ -20,36 +20,37 @@ class ParameterTree(pgParameterTree):
         self.params = [
             {'name': 'nozzle', 'type': 'group', 'children': [
                 {'name': 'nozzle_diameter', 'type': 'float', 'value': float(self.settings['Print']['nozzle']['nozzle_diameter'])},
-                {'name': 'filament_diameter', 'type': 'float', 'value': float(self.settings['Print']['nozzle']['filament_diameter'])},
+                # {'name': 'filament_diameter', 'type': 'float', 'value': float(self.settings['Print']['nozzle']['filament_diameter'])},
             ]},
             {'name': 'layer', 'type': 'group', 'children': [
                 {'name': 'layer_height', 'type': 'float', 'value': float(self.settings['Print']['layer']['layer_height'])},
             ]},
             
-            {'name': 'speed', 'type': 'group', 'children': [
-                {'name': 'print_speed', 'type': 'int', 'value': int(self.settings['Print']['speed']['print_speed'])},
-                {'name': 'travel_speed', 'type': 'int', 'value': int(self.settings['Print']['speed']['travel_speed'])},
+            {'name': 'nozzle_extrude_speed', 'type': 'group', 'children': [
+                # {'name': 'print_speed', 'type': 'int', 'value': int(self.settings['Print']['speed']['print_speed'])},
+                {'name': 'extrude_speed', 'type': 'int', 'value': int(self.settings['Print']['nozzle_extrude_speed']['extrude_speed'])},
+                {'name': 'travel_speed', 'type': 'int', 'value': int(self.settings['Print']['nozzle_extrude_speed']['travel_speed'])},
             ]},
             {'name': 'origin', 'type': 'group', 'children': [
                 {'name': 'x', 'type': 'int', 'value': int(self.settings['Print']['origin']['x'])},
                 {'name': 'y', 'type': 'int', 'value': int(self.settings['Print']['origin']['y'])},
             ]},
-            {'name': 'fan_speed', 'type': 'group', 'children': [
-                {'name': 'fan_speed', 'type': 'int', 'value': int(self.settings['Print']['fan_speed']['fan_speed'])},
-            ]},
-            {'name': 'temperature', 'type': 'group', 'children': [
-                {'name': 'nozzle_temperature', 'type': 'int', 'value': int(self.settings['Print']['temperature']['nozzle_temperature'])},
-                {'name': 'bed_temperature', 'type': 'int', 'value': int(self.settings['Print']['temperature']['bed_temperature'])},
-            ]},
-            {'name': 'travel_option', 'type': 'group', 'children': [
-                {'name': 'retraction', 'type': 'bool', 'value': bool(self.settings['Print']['travel_option']['retraction'])},
-                {'name': 'retraction_distance', 'type': 'float', 'value': float(self.settings['Print']['travel_option']['retraction_distance'])},
-                {'name': 'unretraction_distance', 'type': 'float', 'value': float(self.settings['Print']['travel_option']['unretraction_distance'])},
-                {'name': 'z_hop', 'type': 'bool', 'value': bool(self.settings['Print']['travel_option']['z_hop'])},
-                {'name': 'z_hop_distance', 'type': 'float', 'value': float(self.settings['Print']['travel_option']['z_hop_distance'])},
-            ]},
-            {'name': 'extrusion_option', 'type': 'group', 'children': [
-                {'name': 'extrusion_multiplier', 'type': 'float', 'value': float(self.settings['Print']['extrusion_option']['extrusion_multiplier'])},
+            # {'name': 'fan_speed', 'type': 'group', 'children': [
+            #     {'name': 'fan_speed', 'type': 'int', 'value': int(self.settings['Print']['fan_speed']['fan_speed'])},
+            # ]},
+            # {'name': 'temperature', 'type': 'group', 'children': [
+            #     {'name': 'nozzle_temperature', 'type': 'int', 'value': int(self.settings['Print']['temperature']['nozzle_temperature'])},
+            #     {'name': 'bed_temperature', 'type': 'int', 'value': int(self.settings['Print']['temperature']['bed_temperature'])},
+            # ]},
+            # {'name': 'travel_option', 'type': 'group', 'children': [
+            #     {'name': 'retraction', 'type': 'bool', 'value': bool(self.settings['Print']['travel_option']['retraction'])},
+            #     {'name': 'retraction_distance', 'type': 'float', 'value': float(self.settings['Print']['travel_option']['retraction_distance'])},
+            #     {'name': 'unretraction_distance', 'type': 'float', 'value': float(self.settings['Print']['travel_option']['unretraction_distance'])},
+            #     {'name': 'z_hop', 'type': 'bool', 'value': bool(self.settings['Print']['travel_option']['z_hop'])},
+            #     {'name': 'z_hop_distance', 'type': 'float', 'value': float(self.settings['Print']['travel_option']['z_hop_distance'])},
+            # ]},
+            {'name': 'extrude_speed_option', 'type': 'group', 'children': [
+                {'name': 'extrusion_speed_multiplier', 'type': 'float', 'value': float(self.settings['Print']['extrude_speed_option']['extrusion_speed_multiplier'])},
             ]},
             
         ]
