@@ -9,7 +9,7 @@
         },
         "nozzle_extrude_speed": {
             "extrude_speed": 1000000,
-            "travel_speed": 10000
+            "travel_speed": 4000
         },
         "origin": {
             "x": 0,
@@ -36,9 +36,9 @@
     "Hardware": {
         "kinematics": "Cartesian",
         "bed_size": {
-            "bed_size_x": 210,
-            "bed_size_y": 210,
-            "bed_size_z": 205
+            "bed_size_x": 1000,
+            "bed_size_y": 1000,
+            "bed_size_z": 1000
         }
     },
     "Kinematics": {
